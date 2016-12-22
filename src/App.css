@@ -1,0 +1,432 @@
+.App {
+  font-family: 'avenir';
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.Main {
+  background-image: url("../IMG/bg.png");
+  background-size: cover;
+  height: 700px;
+}
+
+/* Generic Classes */
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+/********************/
+
+.MainHeader {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.MainSearchWrapper {
+  height: 100px;
+  width: 70%;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #aaaaaa;
+}
+
+.mainSearch {
+  height: 80px;
+  width: 60%;;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  border: none;
+  color: #444444;
+  font-size: 25px;
+}
+
+.mainGo {
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  line-height: 50px;
+  right: 20px;
+  color: #9013fe;
+}
+
+.searchBarTitle {
+  color: #ffffff;
+  margin-top: 100px;
+  font-size: 70px;
+  text-align: center;
+}
+
+.logo {
+  position: relative;
+  height: 40%;
+  top: 30%;
+  float: left;
+  margin-left: 40px;
+}
+
+.searchWrapper {
+  position: relative;
+  height: 40%;
+  top: 30%;
+  width: 300px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  float: left;
+  margin-left: 40px;
+}
+
+.search {
+  height: 60%;
+  width: 80%;
+  position: relative;
+  top: 20%;
+  left: 20px;
+  border: none;
+  color: #444444;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.loupe {
+  float: right;
+  position: relative;
+  height: 50%;
+  top: 25%;
+  right: 20px;
+}
+
+.profileWrapper {
+  float: right;
+  height: 100px;
+  position: relative;
+  right: 30px
+}
+
+.sup {
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: 25px;
+  margin-right: 10px;
+}
+
+.profileImgWrapper {
+  display: inline-block;
+  float: right;
+  height: 60px;
+  width: 60px;
+  top: 18px;
+  position: relative;
+  border-radius: 50px;
+  border: 3px solid #9013fe;
+}
+
+.profileImg {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.headerItem {
+  font-size: 20px;
+  float: right;
+  margin-right: 40px;
+  color: #ffffff;
+  line-height: 100px; /*must be same as header height*/
+}
+
+.home {
+  background-color: #ffffff;
+  height: 700px;
+}
+
+.Header {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #F1E2FE;
+}
+
+.NavHeader {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #F1E2FE;
+}
+
+.navOption {
+  height: 100%;
+  width: 100px;
+  display: inline-block;
+  line-height: 40px; /* must be same as .NavHeader height*/
+  color: #4f5a65;
+  text-align: center;
+}
+
+.navOptions {
+  height: 100%;
+  width: 300px;
+  margin: auto;
+}
+
+.navIndicator {
+  height: 3px;
+  width: 100px;
+  background-color: #9013fe;
+  position: relative;;
+  bottom: 3px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.Section {
+  height: 700px;
+  width: 100%;
+}
+
+.Trending {
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.trendingTitle {
+  position: relative;
+  left: 20px;
+  color: #4f5a65;
+  font-size: 35px;
+}
+
+.Event {
+  width: 21%;
+  height: 200px;
+  display: inline-block;
+  margin: 2%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #ccc;
+  overflow: hidden;
+}
+
+.eventDate {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px #ccc;
+  text-align: center;
+}
+
+.eventDateDay {
+  position: relative;
+  top: 5px;
+  margin: 0px;
+  font-size: 25px;
+  color: #4f5a65;
+}
+
+.eventDateMonth {
+  position: relative;
+  top: -5px;
+  margin: 0px;
+  font-size: 15px;
+  color: #4f5a65;
+}
+
+.eventIMG {
+  height: 50%;
+  width: 100%;
+}
+
+.eventName {
+  margin: 0px;
+  font-size: 1.0em;
+  position: relative;
+  left: 10px;
+  color: #4f5a65;
+}
+
+.eventLocation {
+  margin: 0px;
+  font-size: 0.7em;
+  position: relative;
+  left: 10px;
+  color: #4f5a65;
+}
+
+.eventDividerLine {
+  height: 1px;
+  width: 100%;
+  background-color: #F1E2FE;
+}
+
+.eventTags {
+  width: 100%;
+  top: 0px;
+  height: 100px;
+  text-align: center;
+}
+
+.eventTag {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;
+  background-color: #9013fe;
+  border-radius: 20px;
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px; margin-right: 5px;
+  margin-top: 15px;
+}
+
+.Channel {
+  width: 23%;
+  height: 200px;
+  display: inline-block;
+  margin: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #ccc;
+  overflow: hidden;
+}
+
+.channelImg {
+  height: 100%;
+  width: 30%;
+  float: left;
+}
+
+.channelContent {
+  height: 100%;
+  width: 70%;
+  float: right;
+}
+
+.channelName {
+  position: relative;
+  left: 20px;
+  margin-bottom: 0px;
+  color: #4f5a65;
+  font-size: 20px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.channelTwitter {
+  position: relative;
+  left: 20px;
+  margin-top: 0px;
+  color: #9013fe;
+  margin-bottom: 0px;
+}
+
+.channelEventsFollowers {
+  height: 80px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.channelEventsWrapper {
+  width: 50%;
+  float: left;
+}
+
+.channelFollowersWrapper {
+  width: 50%;
+  float: left;
+}
+
+.channelEventsTitle {
+  position: relative;
+  color: #4f5a65;
+  left: 20px;
+  margin-bottom: 0px;
+}
+
+.channelEvents {
+  position: relative;
+  color: #4f5a65;
+  left: 20px;
+  margin-top: 0px;
+}
+
+.channelFollowersTitle {
+  position: relative;
+  color: #4f5a65;
+  margin-bottom: 0px;
+}
+
+.channelFollowers {
+  position: relative;
+  color: #4f5a65;
+  margin-top: 0px;
+}
+
+.channelCategory {
+  position: relative;
+  left: 20px;
+  background-color: #4f5a65;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 0px;
+}
+
+.NearAndNow {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.Browse {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+}
+
+@media (max-width: 1000px) {
+  .Event, .Channel {
+    width: 30%;
+    margin: 1.6%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Event, .Channel {
+    width: 45%;
+    margin: 2.5%;
+  }
+
+  .searchWrapper {
+    display:none;
+  }
+}
+
+@media (max-width: 400px) {
+  .Event, .Channel {
+    width: 90%;
+    margin: 5%;
+  }
+}
