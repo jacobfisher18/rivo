@@ -4,7 +4,10 @@ class NavHeader extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {navPosition: 0};
+    this.state = {
+      navPosition: 0,
+      sectionSelected: 0
+    };
   }
 
   trendingClick() {
@@ -19,13 +22,18 @@ class NavHeader extends Component {
     this.setState({navPosition: 200});
   }
 
+  onSectionSelect(newSection) {
+    this.props.selectMethod(newSection);
+    this.setState({navPosition: 100 * newSection});
+  }
+
   render() {
     return (
       <div className="NavHeader">
         <div className="navOptions">
-          <div className="navOption pointer" onClick={this.trendingClick.bind(this)}>Trending</div>
-          <div className="navOption pointer" onClick={this.nearandnowClick.bind(this)}>Near & Now</div>
-          <div className="navOption pointer" onClick={this.browseClick.bind(this)}>Browse</div>
+          <div className="navOption pointer" onClick={this.onSectionSelect.bind(this, 0)}>Trending</div>
+          <div className="navOption pointer" onClick={this.onSectionSelect.bind(this, 1)}>Near & Now</div>
+          <div className="navOption pointer" onClick={this.onSectionSelect.bind(this, 2)}>Browse</div>
           <div className="navIndicator" style={{left:this.state.navPosition}}></div>
         </div>
       </div>

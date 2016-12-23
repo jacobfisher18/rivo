@@ -15,6 +15,12 @@ class App extends Component {
     };
   }
 
+  handleSectionSelect(newSection) {
+    this.setState({
+      sectionSelected: newSection
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -25,7 +31,7 @@ class App extends Component {
         </div>
         <div className="home">
           <Header />
-          <NavHeader />
+          <NavHeader selectMethod={this.handleSectionSelect.bind(this)}/>
           <Section sectionSelected={this.state.sectionSelected}/>
         </div>
       </div>

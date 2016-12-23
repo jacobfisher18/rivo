@@ -6,14 +6,9 @@ import Browse from './Browse';
 
 class Section extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {sectionSelected: this.props.sectionSelected};
-  }
-
   render() {
 
-    if (this.state.sectionSelected == 0) {
+    if (this.props.sectionSelected == 0) {
       return (
         <div className="Section">
           <Trending />
@@ -21,7 +16,7 @@ class Section extends Component {
       );
     }
 
-    else if (this.state.sectionSelected == 1){
+    else if (this.props.sectionSelected == 1){
       return (
         <div className="Section">
           <NearAndNow />

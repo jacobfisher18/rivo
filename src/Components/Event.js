@@ -17,7 +17,7 @@ class Event extends Component {
   render() {
     return (
 
-        <div className="Event">
+        <div className="Event gridItem pointer">
           <div className="eventDate">
             <p className="eventDateDay">{this.state.dateDay}</p>
             <p className="eventDateMonth">{this.state.dateMonth}</p>

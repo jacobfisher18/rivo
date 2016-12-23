@@ -17,7 +17,7 @@ class Channel extends Component {
 
   render() {
     return (
-      <div className="Channel">
+      <div className="Channel gridItem pointer">
         <img className="channelImg" src={require('../../IMG/' + this.state.img)}></img>
         <div className="channelContent">
           <p className="channelName">{this.state.name}</p>
