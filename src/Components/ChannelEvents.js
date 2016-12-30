@@ -28,7 +28,7 @@ class ChannelEvents extends Component {
 
   render() {
     return (
-      <div className="trending">
+      <div className="channelEventSection">
         <Event img='pablo.png' name="Saint Pablo Tour" location="Echoplex" tags={["Echoplex", "Concerts", "Featured"]} dateDay={14} dateMonth="NOV"/>
         <Event img='car.png' name="Santa Monica Car Show" location="Santa Monica" tags={["Santa Monica", "Concerts", "Featured"]}  dateDay={18} dateMonth="NOV"/>
         <Event img='corgi.png' name="Corgi Beach Day" location="Venice" tags={["Venice", "Concerts", "Featured"]}  dateDay={21} dateMonth="NOV"/>

@@ -15,13 +15,20 @@ class Event extends Component {
   }
 
   render() {
+
+    var bgURL = require('../../IMG/' + this.state.img);
+    var IMGStyle = {
+      backgroundImage: "url(" + bgURL + ")"
+    };
+
     return (
         <div className="gridItem pointer">
-          {/*<div className="eventDate">
+          <div className="eventDate">
             <p className="eventDateDay">{this.state.dateDay}</p>
             <p className="eventDateMonth">{this.state.dateMonth}</p>
-          </div>*/}
-          <img className="eventIMG" src={require('../../IMG/' + this.state.img)} alt="Event"></img>
+          </div>
+          <div className="eventIMGWrapper" style={IMGStyle}>
+          </div>
           <div className="eventDetails">
             <p className="eventName">{this.state.name}</p>
             <p className="eventLocation">{this.state.location}</p>
