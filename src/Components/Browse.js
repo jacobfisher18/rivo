@@ -5,7 +5,7 @@ import Category from './Category';
 class Browse extends Component {
   render() {
     return (
-      <div className="Browse">
+      <div className="browse">
         <p className="categoriesTitle trendingTitle">Categories</p>
         <Category name="Venues & Locations" channels={34}/>
         <Category name="Other Category" channels={15}/>

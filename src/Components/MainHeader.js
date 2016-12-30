@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class MainHeader extends Component {
   render() {
     return (
-      <div className="MainHeader">
-        <img className="logo pointer" src={require('../../IMG/logo.png')}></img>
-        <div className="headerItem login pointer">login</div>
-        <div className="headerItem signup pointer">signup</div>
+      <div className="mainHeader">
+        <img className="logo pointer" src={require('../../IMG/logo.png')} alt="logo"></img>
+        <div className="mainHeaderItem signup pointer">signup</div>
+        <div className="mainHeaderItem login pointer">login</div>
       </div>
     );
   }

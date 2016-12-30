@@ -16,16 +16,16 @@ class Event extends Component {
 
   render() {
     return (
-
-        <div className="Event gridItem pointer">
-          <div className="eventDate">
+        <div className="gridItem pointer">
+          {/*<div className="eventDate">
             <p className="eventDateDay">{this.state.dateDay}</p>
             <p className="eventDateMonth">{this.state.dateMonth}</p>
+          </div>*/}
+          <img className="eventIMG" src={require('../../IMG/' + this.state.img)} alt="Event"></img>
+          <div className="eventDetails">
+            <p className="eventName">{this.state.name}</p>
+            <p className="eventLocation">{this.state.location}</p>
           </div>
-          <img className="eventIMG" src={require('../../IMG/' + this.state.img)}></img>
-          <p className="eventName">{this.state.name}</p>
-          <p className="eventLocation">{this.state.location}</p>
-          <div className="eventDividerLine"></div>
           <div className="eventTags">
             <div className="eventTag">#{this.state.tags[0]}</div>
             <div className="eventTag">#{this.state.tags[1]}</div>

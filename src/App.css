@@ -1,22 +1,22 @@
+/* General */
+
+:root {
+  --main-color: #9013FE;
+  --font-tiny: 12px;
+  --font-small: 15px;
+  --font-medium: 25px;
+  --font-large: 35px;
+  --font-huge: 60px;
+}
+
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.App {
   font-family: 'avenir';
 }
-
-.Main {
-  background-image: url("../IMG/bg.png");
-  background-size: cover;
-  height: 700px;
-}
-
-/* Generic */
 
 .pointer:hover {
   cursor: pointer;
@@ -26,21 +26,45 @@ input:focus {
   outline: none;
 }
 
-/********************/
+/* Main */
 
-.MainHeader {
-  height: 100px;
-  width: 100%;
-  border-bottom: 1px solid white;
+.main {
+  background-image: url("../IMG/bg.png");
+  background-size: cover;
+  height: 700px;
 }
 
-.MainSearchWrapper {
+/*also used in other headers */
+.logo {
+  position: relative;
+  height: 30%;
+  top: 35%;
+  float: left;
+  margin-left: 40px;
+}
+
+.mainHeader {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #F1E2FE;
+}
+
+.mainHeaderItem {
+  font-size: var(--font-small);
+  float: right;
+  margin-right: 40px;
+  color: #ffffff;
+  line-height: 100px; /*must be same as header height*/
+}
+
+.mainSearchWrapper {
   height: 100px;
   width: 70%;
   background-color: white;
   margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px #aaaaaa;
+  box-shadow: 0 0 10px 0 #aaaaaa;
+  box-shadow: 1px 1px 30px #888888;
 }
 
 .mainSearch {
@@ -51,33 +75,36 @@ input:focus {
   left: 30px;
   border: none;
   color: #444444;
-  font-size: 25px;
+  font-size: var(--font-medium);
+}
+
+.mainSearchTitle {
+  color: #ffffff;
+  margin-top: 100px;
+  font-size: var(--font-huge);
+  text-align: center;
+  text-shadow: 2px 2px 10px #444444;
 }
 
 .mainGo {
   float: right;
-  font-size: 25px;
+  font-size: var(--font-medium);
   font-weight: bold;
   position: relative;
   line-height: 50px;
   right: 20px;
-  color: #9013fe;
+  color: var(--main-color);
 }
 
-.searchBarTitle {
-  color: #ffffff;
-  margin-top: 100px;
-  font-size: 70px;
-  text-align: center;
+/* Header */
+
+.header {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #F1E2FE;
 }
 
-.logo {
-  position: relative;
-  height: 40%;
-  top: 30%;
-  float: left;
-  margin-left: 40px;
-}
+/* Search (Within header) */
 
 .searchWrapper {
   position: relative;
@@ -98,7 +125,7 @@ input:focus {
   left: 20px;
   border: none;
   color: #444444;
-  font-size: 15px;
+  font-size: var(--font-small);
 }
 
 .loupe {
@@ -109,6 +136,8 @@ input:focus {
   right: 20px;
 }
 
+/* Profile (Within Header) */
+
 .profileWrapper {
   float: right;
   height: 100px;
@@ -117,7 +146,6 @@ input:focus {
 }
 
 .sup {
-  display: inline-block;
   float: right;
   position: relative;
   top: 25px;
@@ -125,14 +153,13 @@ input:focus {
 }
 
 .profileImgWrapper {
-  display: inline-block;
   float: right;
   height: 60px;
   width: 60px;
   top: 18px;
   position: relative;
   border-radius: 50px;
-  border: 3px solid #9013fe;
+  border: 3px solid var(--main-color);
 }
 
 .profileImg {
@@ -144,26 +171,9 @@ input:focus {
   top: 5px;
 }
 
-.headerItem {
-  font-size: 20px;
-  float: right;
-  margin-right: 40px;
-  color: #ffffff;
-  line-height: 100px; /*must be same as header height*/
-}
+/* Nav */
 
-.home {
-  background-color: #ffffff;
-  height: 700px;
-}
-
-.Header {
-  height: 100px;
-  width: 100%;
-  border-bottom: 1px solid #F1E2FE;
-}
-
-.NavHeader {
+.navHeader {
   height: 40px;
   width: 100%;
   border-bottom: 1px solid #F1E2FE;
@@ -187,18 +197,22 @@ input:focus {
 .navIndicator {
   height: 3px;
   width: 100px;
-  background-color: #9013fe;
+  background-color: var(--main-color);
   position: relative;;
   bottom: 3px;
   border-radius: 10px;
   transition: all 0.5s;
 }
 
-.Section {
+/* Section */
+
+.section {
   width: 100%;
 }
 
-.Trending {
+/* Trending Section */
+
+.trending {
   height: 100%;
   margin-left: 20px;
   margin-right: 20px;
@@ -208,8 +222,37 @@ input:focus {
   position: relative;
   left: 20px;
   color: #4f5a65;
-  font-size: 35px;
+  font-size: var(--font-large);
 }
+
+/* Near and Now Section */
+
+.nearAndNow {
+  height: 100%;
+}
+
+.sideBar {
+  height: 600px;
+  width: 30%;
+  float: left;
+}
+
+.map {
+  height: 600px;
+  width: 70%;
+  background-color: var(--main-color);
+  float: right;
+}
+
+/* Browse Section */
+
+.browse {
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Event */
 
 .eventDate {
   position: absolute;
@@ -219,23 +262,23 @@ input:focus {
   width: 60px;
   border-radius: 40px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 10px 0px #ccc;
+  box-shadow: 0 0 10px 0 #ccc;
   text-align: center;
 }
 
 .eventDateDay {
   position: relative;
   top: 5px;
-  margin: 0px;
-  font-size: 25px;
+  margin: 0;
+  font-size: var(--font-medium);
   color: #4f5a65;
 }
 
 .eventDateMonth {
   position: relative;
   top: -5px;
-  margin: 0px;
-  font-size: 15px;
+  margin: 0;
+  font-size: var(--font-small);
   color: #4f5a65;
 }
 
@@ -244,48 +287,48 @@ input:focus {
   width: 100%;
 }
 
+.eventDetails {
+  height: 30%;
+  width: 100%;
+  border-bottom: 1px solid #F1E2FE;
+  box-sizing: border-box;
+  padding: 10px 15px 10px 15px;
+}
+
 .eventName {
-  margin: 0px;
-  font-size: 1.0em;
-  position: relative;
-  left: 10px;
+  font-size: var(--font-small);
   color: #4f5a65;
+  margin: 0;
 }
 
 .eventLocation {
-  margin: 0px;
-  font-size: 0.7em;
+  font-size: var(--font-tiny);
   position: relative;
-  left: 10px;
   color: #4f5a65;
-}
-
-.eventDividerLine {
-  height: 1px;
-  width: 100%;
-  background-color: #F1E2FE;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .eventTags {
   width: 100%;
-  top: 0px;
-  height: 100px;
+  height: 20%;
   text-align: center;
+  margin-top: 3px;
 }
 
 .eventTag {
-  height: 20px;
-  line-height: 20px;
-  padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;
-  background-color: #9013fe;
+  line-height: 15px;
+  padding: 3px 10px 3px 10px;
+  background-color: var(--main-color);
   border-radius: 20px;
-  font-size: 10px;
+  font-size: var(--font-tiny);
   color: #ffffff;
   text-align: center;
   display: inline-block;
-  margin-left: 5px; margin-right: 5px;
-  margin-top: 15px;
+  margin: 5px 5px 5px 5px;
 }
+
+/* Channel */
 
 .channelImg {
   height: 100%;
@@ -302,9 +345,9 @@ input:focus {
 .channelName {
   position: relative;
   left: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   color: #4f5a65;
-  font-size: 20px;
+  font-size: var(--font-medium);
   height: 30px;
   overflow: hidden;
 }
@@ -312,15 +355,15 @@ input:focus {
 .channelTwitter {
   position: relative;
   left: 20px;
-  margin-top: 0px;
-  color: #9013fe;
-  margin-bottom: 0px;
+  margin-top: 0;
+  color: var(--main-color);
+  margin-bottom: 0;
 }
 
 .channelEventsFollowers {
   height: 80px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .channelEventsWrapper {
@@ -337,26 +380,26 @@ input:focus {
   position: relative;
   color: #4f5a65;
   left: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .channelEvents {
   position: relative;
   color: #4f5a65;
   left: 20px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .channelFollowersTitle {
   position: relative;
   color: #4f5a65;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .channelFollowers {
   position: relative;
   color: #4f5a65;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .channelCategory {
@@ -368,46 +411,14 @@ input:focus {
   border-radius: 10px;
   text-align: center;
   line-height: 30px;
-  font-size: 12px;
+  font-size: var(--font-tiny);
   color: #ffffff;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
-.NearAndNow {
-  height: 100%;
-}
-
-.sideBar {
-  height: 600px;
-  width: 30%;
-  float: left;
-}
-
-.map {
-  height: 600px;
-  width: 70%;
-  background-color: #9013fe;
-  float: right;
-}
-
-.Browse {
-  height: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.gridItem {
-  width: 21%;
-  height: 200px;
-  display: inline-block;
-  margin: 2%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px #ccc;
-  overflow: hidden;
-}
+/* Category */
 
 .categoryItem {
-  font-size: 25px;
   color: #4f5a65;
   position: relative;
   margin-left: 30px;
@@ -415,29 +426,43 @@ input:focus {
 }
 
 .categoryName {
+  font-size: var(--font-medium);
   margin-top: 20px;
   height: 80px;
 }
 
 .categoryChannelsTitle {
-  font-size: 15px;
-  margin-bottom: 0px;
+  font-size: var(--font-small);
+  margin-bottom: 0;
 }
 
 .categoryChannels {
-  font-size: 20px;
-  margin-top: 0px;
+  font-size: var(--font-medium);
+  margin-top: 0;
 }
 
+/* Grid Positioning */
+.gridItem {
+  width: 21%;
+  margin: 2%;
+  height: 220px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 #ccc;
+  overflow: hidden;
+}
+
+/* Media Queries */
+
 @media (max-width: 1000px) {
-  .Event, .Channel, .Category {
+  .gridItem {
     width: 30%;
     margin: 1.6%;
   }
 }
 
 @media (max-width: 700px) {
-  .Event, .Channel, .Category {
+  .gridItem {
     width: 45%;
     margin: 2.5%;
   }
@@ -448,8 +473,137 @@ input:focus {
 }
 
 @media (max-width: 400px) {
-  .Event, .Channel, .Category {
+  .gridItem {
     width: 90%;
     margin: 5%;
   }
 }
+
+/* Search */
+
+/*
+.Search {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+}
+
+.FilterBuffer {
+  height: 29px;
+  background-color: white;
+  border-bottom: 1px solid #F1E2FE;
+}
+
+.FilterButton {
+  width: 58px;
+  height: 16px;
+  background-color: #9013FE;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  align-content: center;
+  font-family: roboto-light;
+  line-height: 15px;
+  margin-right: 50px;
+  float: right;
+  margin-top: 6.5px;
+}
+
+.FilterAttributesContainer{
+  height: 114px;
+  background-color: white;
+  border-bottom: 1px solid #F1E2FE;
+}
+
+.FilterAttributes{
+  width:25%;
+  height:100%;
+  border-right: 1px solid #F1E2FE;
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  vertical-align: top;
+}
+
+.FilterAttributeContent{
+  width: 137px;
+  height: 69px;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: roboto-light;
+  color: #4F5A65;
+}
+
+.Neighborhood{
+}
+
+.NeighborhoodSearchContiner{
+  height: 26px;
+  width: 137px;
+  border: 1px solid #F4F5F6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 25px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.NeighborhoodSearch{
+  font-size: 11px;
+  width: 110px;
+  font-family: roboto-light;
+  color: #4F5A65;
+  border: none;
+  margin-top: 3px;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.locationIconContainer{
+  width: 8px;
+  height: 13.07px;
+  background-image: url("../IMG/locationIcon.png");
+  background-size: contain;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+input:focus {
+  outline: none;
+}
+
+.DateRangeContainer{
+  margin-top: 15px;
+}
+
+.DateContainer{
+  width: 172px;
+  font-family: roboto;
+  font-size: 11px;
+  color: #4F5A65;
+}
+
+.DateText{
+  display: inline-block;
+  margin-right:5px;
+}
+
+.EndDatePicker{
+  display: inline-block;
+}
+
+.Price{
+}
+
+.ResultCount{
+  font-size: 36px;
+  font-family: .SF NF Display;
+  color: #4F5A65;
+  text-align: center;
+  align-content: center;
+  line-height: 100px;
+}*/

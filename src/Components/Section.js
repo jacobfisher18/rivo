@@ -8,29 +8,17 @@ class Section extends Component {
 
   render() {
 
-    if (this.props.sectionSelected == 0) {
-      return (
-        <div className="Section">
-          <Trending />
-        </div>
-      );
-    }
+    let sectionSelected = null;
 
-    else if (this.props.sectionSelected == 1){
-      return (
-        <div className="Section">
-          <NearAndNow />
-        </div>
-      );
-    }
+    if (this.props.sectionSelected === 0) {sectionSelected = <Trending />;}
+    else if (this.props.sectionSelected === 1) {sectionSelected = <NearAndNow />;}
+    else {sectionSelected = <Browse />;}
 
-    else {
-      return (
-        <div className="Section">
-          <Browse />
-        </div>
-      );
-    }
+    return (
+      <div>
+        {sectionSelected}
+      </div>
+    );
   }
 }
 

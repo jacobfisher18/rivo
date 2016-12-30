@@ -4,7 +4,7 @@ class NearAndNow extends Component {
 
   render() {
     return (
-      <div className="NearAndNow">
+      <div className="nearAndNow">
         <div className="sideBar"></div>
         <div className="map">
         </div>

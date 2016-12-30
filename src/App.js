@@ -23,10 +23,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="Main">
+      <div className="app">
+        <div className="main">
           <MainHeader />
-          <h1 className="searchBarTitle">Find your next</h1>
+          <p className="mainSearchTitle">Find your next</p>
           <MainSearch />
         </div>
         <div className="home">
