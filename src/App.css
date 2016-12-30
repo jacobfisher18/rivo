@@ -31,6 +31,7 @@ input:focus {
 .main {
   background-image: url("../IMG/bg.png");
   background-size: cover;
+  background-position: center;
   height: 700px;
 }
 
@@ -98,10 +99,15 @@ input:focus {
 
 /* Header */
 
-.header {
+.header-main {
   height: 100px;
   width: 100%;
   border-bottom: 1px solid #F1E2FE;
+}
+
+.header-channel {
+  height: 100px;
+  width: 100%;
 }
 
 /* Search (Within header) */
@@ -126,6 +132,7 @@ input:focus {
   border: none;
   color: #444444;
   font-size: var(--font-small);
+  background: none;
 }
 
 .loupe {
@@ -194,11 +201,18 @@ input:focus {
   margin: auto;
 }
 
+/*smaller width for only two options*/
+.channelNavOptions {
+  height: 100%;
+  width: 200px;
+  margin: auto;
+}
+
 .navIndicator {
   height: 3px;
   width: 100px;
   background-color: var(--main-color);
-  position: relative;;
+  position: relative;
   bottom: 3px;
   border-radius: 10px;
   transition: all 0.5s;
@@ -213,6 +227,12 @@ input:focus {
 /* Trending Section */
 
 .trending {
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.channelEventSection {
   height: 100%;
   margin-left: 20px;
   margin-right: 20px;
@@ -450,6 +470,15 @@ input:focus {
   border-radius: 10px;
   box-shadow: 0 0 5px 0 #ccc;
   overflow: hidden;
+}
+
+/* Channel Page */
+
+.channelPage {
+  background-image: url("../IMG/bg_grey.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
 
 /* Media Queries */

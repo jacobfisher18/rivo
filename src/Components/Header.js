@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import { Router, Route, hashHistory, Link } from 'react-router';
+
 class Header extends Component {
   render() {
     return (
-      <div className="header">
-        <img className="logo pointer" src={require('../../IMG/logo_grey.png')} alt="logo"></img>
+      <div className={"header-" + this.props.headerType}>
+        <Link to="/"><img className="logo pointer" src={require('../../IMG/logo_grey.png')} alt="logo"></img></Link>
         <div className="searchWrapper">
           <input className="search">
           </input>

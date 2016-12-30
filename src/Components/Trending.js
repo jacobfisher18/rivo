@@ -5,6 +5,8 @@ import Channel from './Channel';
 
 import axios from 'axios';
 
+import { Router, Route, hashHistory, Link } from 'react-router';
+
 class Trending extends Component {
 
   constructor(props) {
@@ -39,10 +41,10 @@ class Trending extends Component {
         <Event img='corgi.png' name="Corgi Beach Day" location="Venice" tags={["Venice", "Concerts", "Featured"]}  dateDay={21} dateMonth="NOV"/>
         <Event img='yoga.png' name="Yoga in the Park" location="Griffith Park" tags={["Griffith Park", "Concerts", "Featured"]}  dateDay={3} dateMonth="DEC"/>
         <p className="trendingTitle">Channels</p>
-        <Channel img='echo.png' name="Echoplex" twitter="echoplexofficial" verified={true} events={381} followers={553} category="LA Concerts"/>
-        <Channel img='greek.png' name="Greek" twitter="greektheater" verified={true} events={381} followers={553} category="Outdoor"/>
-        <Channel img='hollywood.png' name="Hollywood Bowl" twitter="hollywoodbowl" verified={true} events={381} followers={553} category="Outdoor"/>
-        <Channel img='shrine.png' name="Shrine Auditorium" twitter="shrinela" verified={true} events={381} followers={553} category="LA Concerts"/>
+        <Link to="/channel"><Channel img='echo.png' name="Echoplex" twitter="echoplexofficial" verified={true} events={381} followers={553} category="LA Concerts"/></Link>
+        <Link to="/channel"><Channel img='greek.png' name="Greek" twitter="greektheater" verified={true} events={381} followers={553} category="Outdoor"/></Link>
+        <Link to="/channel"><Channel img='hollywood.png' name="Hollywood Bowl" twitter="hollywoodbowl" verified={true} events={381} followers={553} category="Outdoor"/></Link>
+        <Link to="/channel"><Channel img='shrine.png' name="Shrine Auditorium" twitter="shrinela" verified={true} events={381} followers={553} category="LA Concerts"/></Link>
       </div>
     );
   }

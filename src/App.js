@@ -4,7 +4,9 @@ import MainHeader from './Components/MainHeader';
 import MainSearch from './Components/MainSearch';
 import Header from './Components/Header';
 import NavHeader from './Components/NavHeader';
-import Section from './Components/Section';
+import Trending from './Components/Trending';
+import NearAndNow from './Components/NearAndNow';
+import Browse from './Components/Browse';
 
 class App extends Component {
 
@@ -22,6 +24,13 @@ class App extends Component {
   }
 
   render() {
+
+    let sectionSelected = null;
+
+    if (this.state.sectionSelected === 0) {sectionSelected = <Trending />;}
+    else if (this.state.sectionSelected === 1) {sectionSelected = <NearAndNow />;}
+    else {sectionSelected = <Browse />;}
+
     return (
       <div className="app">
         <div className="main">
@@ -30,9 +39,9 @@ class App extends Component {
           <MainSearch />
         </div>
         <div className="home">
-          <Header />
+          <Header headerType="main"/>
           <NavHeader selectMethod={this.handleSectionSelect.bind(this)}/>
-          <Section sectionSelected={this.state.sectionSelected}/>
+          {sectionSelected}
         </div>
       </div>
     );
