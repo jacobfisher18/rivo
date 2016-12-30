@@ -22,7 +22,7 @@ class Event extends Component {
     };
 
     return (
-        <div className="gridItem pointer">
+        <div className="event gridItem pointer" onClick={this.props.onClick}>
           <div className="eventDate">
             <p className="eventDateDay">{this.state.dateDay}</p>
             <p className="eventDateMonth">{this.state.dateMonth}</p>
