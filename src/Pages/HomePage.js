@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import Favicon from 'react-favicon'
 
 import '../CSS/App.css';
+
 
 import Main from '../Components/Main';
 import Header from '../Components/Header';
@@ -35,6 +37,8 @@ class HomePage extends Component {
 
     return (
       <div className="app">
+
+        <Favicon url={require("../../IMG/logo_favicon.png")} />
         <Main />
         <Header headerType="main"/>
         <NavHeader selectMethod={this.handleSectionSelect}/>
