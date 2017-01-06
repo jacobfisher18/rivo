@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
-import { Router, Route, hashHistory, Link } from 'react-router';
+import SearchBar from './SearchBar';
 
 class Header extends Component {
   render() {
     return (
       <div className={"header-" + this.props.headerType}>
         <Link to="/"><img className="logo pointer" src={require('../../IMG/logo_grey.png')} alt="logo"></img></Link>
-        <div className="searchWrapper">
-          <input className="search">
-          </input>
-          <img className="loupe pointer" src={require('../../IMG/loupe.png')} alt="loupe"></img>
-        </div>
+        <SearchBar />
         <div className="profileWrapper">
           <div className="profileImgWrapper">
             <img className="profileImg" src={require('../../IMG/ned.png')} alt="Profile"></img>

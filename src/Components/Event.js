@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import EventModal from './EventModal';
+
 class Event extends Component {
 
   constructor(props) {
@@ -10,23 +12,39 @@ class Event extends Component {
       location: this.props.location,
       tags: this.props.tags,
       dateDay: this.props.dateDay,
-      dateMonth: this.props.dateMonth
+      dateMonth: this.props.dateMonth,
+      showModal: false
     };
+  }
+
+  handleOpenModal(name) {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal () {
+    this.setState({ showModal: false });
   }
 
   render() {
 
-    var bgURL = require('../../IMG/' + this.state.img);
     var IMGStyle = {
-      backgroundImage: "url(" + bgURL + ")"
+      backgroundImage: "url(" + this.state.img + ")"
     };
 
+    var styleType = null;
+    if (this.props.styleType === "sidebar") {
+      styleType = "sidebarItem";
+    }
+    else {
+      styleType = "gridItem";
+    }
+
     return (
-        <div className="event gridItem pointer" onClick={this.props.onClick}>
-          <div className="eventDate">
+        <div className={"event pointer " + styleType} onClick={this.handleOpenModal.bind(this)}>
+          {/*<div className="eventDate">
             <p className="eventDateDay">{this.state.dateDay}</p>
             <p className="eventDateMonth">{this.state.dateMonth}</p>
-          </div>
+          </div>*/}
           <div className="eventIMGWrapper" style={IMGStyle}>
           </div>
           <div className="eventDetails">
@@ -38,6 +56,7 @@ class Event extends Component {
             <div className="eventTag">#{this.state.tags[1]}</div>
             <div className="eventTag">#{this.state.tags[2]}</div>
           </div>
+          <EventModal showModal={this.state.showModal} closeModal={this.handleCloseModal.bind(this)}  name={this.state.name} img={this.state.img}/>
         </div>
     );
   }

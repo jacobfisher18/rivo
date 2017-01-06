@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import { Router, Route, hashHistory, Link } from 'react-router';
+import { Link } from 'react-router';
 
 class MainHeader extends Component {
   render() {
