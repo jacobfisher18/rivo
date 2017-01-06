@@ -105,7 +105,9 @@ class Browse extends Component {
     return (
       <div className="browse">
         <p className="categoriesTitle trendingTitle">{sectionTitle}</p>
-        {browseGridComponents}
+        <div className="gridContainer">
+          {browseGridComponents}
+        </div>
       </div>
     );
   }

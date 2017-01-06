@@ -61,7 +61,9 @@ class ChannelEvents extends Component {
 
     return (
       <div className="channelEventSection">
-        {eventComponents}
+        <div className="gridContainer">
+          {eventComponents}
+        </div>
       </div>
     );
   }

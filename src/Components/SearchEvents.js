@@ -69,8 +69,10 @@ class SearchEvents extends Component {
 
     return (
       <div className="searchEventSection">
-        {noneFound}
-        {eventComponents}
+        <div className="gridContainer">
+          {noneFound}
+          {eventComponents}
+        </div>
       </div>
     );
   }

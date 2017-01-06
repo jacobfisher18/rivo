@@ -7,7 +7,6 @@ import Header from '../Components/Header';
 import ChannelNav from '../Components/ChannelNav';
 import ChannelEvents from '../Components/ChannelEvents';
 
-
 class ChannelPage extends Component {
 
   constructor(props) {
