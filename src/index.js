@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomePage from './Pages/HomePage';
-import SearchPage from './Pages/SearchPage';
-import ChannelPage from './Pages/ChannelPage';
+import HomePage from './Components/Pages/HomePage';
+import SearchPage from './Components/Pages/SearchPage';
+import ChannelPage from './Components/Pages/ChannelPage';
 import { Router, Route, hashHistory } from 'react-router';
 
 ReactDOM.render((

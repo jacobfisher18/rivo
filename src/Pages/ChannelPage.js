@@ -5,7 +5,7 @@ import '../CSS/App.css';
 
 import Header from '../Components/Header';
 import ChannelNav from '../Components/ChannelNav';
-import ChannelEvents from '../Components/ChannelEvents';
+import EventList from '../Components/EventList';
 
 class ChannelPage extends Component {
 
@@ -59,7 +59,7 @@ class ChannelPage extends Component {
 
     let sectionSelected = null;
 
-    if (this.state.sectionSelected === 0) {sectionSelected = <ChannelEvents id={this.state.id}/>;}
+    if (this.state.sectionSelected === 0) {sectionSelected = <EventList id={this.state.id}/>;}
     else {sectionSelected = <p className="channelPageDescription">{this.state.description}</p>;}
 
     return (

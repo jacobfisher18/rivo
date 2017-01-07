@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '../CSS/App.css';
 
 import Header from '../Components/Header';
-import SearchEvents from '../Components/SearchEvents';
+import EventList from '../Components/EventList';
 
 class SearchPage extends Component {
 
@@ -25,7 +25,7 @@ class SearchPage extends Component {
     return (
       <div>
         <Header headerType="main"/>
-        <SearchEvents searchTerm={this.state.searchTerm} />
+        <EventList searchTerm={this.state.searchTerm} />
       </div>
     );
   }
