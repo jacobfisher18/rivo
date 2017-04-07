@@ -7,43 +7,43 @@ import MoreButton from '../Elements/MoreButton';
 function getMonthString(num) {
   switch (num) {
     case "01":
-      return "JAN";
-      break;
+    return "JAN";
+    break;
     case "02":
-      return "FEB";
-      break;
+    return "FEB";
+    break;
     case "03":
-      return "MAR";
-      break;
+    return "MAR";
+    break;
     case "04":
-      return "APR";
-      break;
+    return "APR";
+    break;
     case "05":
-      return "MAY";
-      break;
+    return "MAY";
+    break;
     case "06":
-      return "JUN";
-      break;
+    return "JUN";
+    break;
     case "07":
-      return "JUL";
-      break;
+    return "JUL";
+    break;
     case "08":
-      return "AUG";
-      break;
+    return "AUG";
+    break;
     case "09":
-      return "SEP";
-      break;
+    return "SEP";
+    break;
     case "10":
-      return "OCT";
-      break;
+    return "OCT";
+    break;
     case "11":
-      return "NOV";
-      break;
+    return "NOV";
+    break;
     case "12":
-      return "DEC";
-      break;
+    return "DEC";
+    break;
     default:
-      return "ERR";
+    return "ERR";
   }
 }
 
@@ -118,54 +118,83 @@ class EventList extends Component {
           loadedIMG = list[i].cloudinaryImageUrl;
         }
 
-        _this.setState({
-          events: _this.state.events.concat(
-            {
-              name: [list[i].eventSummary],
-              img: loadedIMG,
-              location: [list[i].neighborhood],
-              tags: ["tag1", "tag2", "tag3", "tag4"],
-              startDateTime: [list[i].startDateTime],
-              description: [list[i].eventDescription]
-            }
-          )
-        });
-      }
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+        var location = "";
+        if (list[i].hasOwnProperty('neighborhood')) {
+          location = list[i].neighborhood;
+        }
+        else {
+          location = list[i].eventLocation;
+        }
 
-  componentWillMount() {
-    this.loadEvents();
-  }
+        /*
+        //get tags
+        var tagsList = [];
+        var kaliEventId = list[i].kaliEventId;
+        var tagUrl = "https://apiv1.getrivo.com/macroevents/getassociatedchannelsbyeventid?kaliEventId=" + kaliEventId;
 
-  render() {
-    let eventComponents = [];
-    for (var i = 0; i < this.state.events.length; i++) {
-      var currEvent = this.state.events[i];
+        axios.get(tagUrl)
+        .then(function (data) {
+          var allTags = data.data.tagsList;
 
-      var date = getDateDayAndMonth(currEvent.startDateTime);
-      var dateDay = date[0];
-      var dateMonth = date[1];
+          for (var i = 0; i < allTags.length; i++) {
+            tagsList.push(allTags[i].name)
+          }
+        }
+      ).catch(function (error) {
+        console.log(error);
+      });
 
-      eventComponents.push( <Event img={currEvent.img} name={currEvent.name} location={currEvent.location} tags={currEvent.tags}  dateDay={dateDay} dateMonth={dateMonth} description={currEvent.description}/> );
+      console.log(tagsList);*/
+
+      _this.setState({
+        events: _this.state.events.concat(
+          {
+            name: [list[i].eventSummary],
+            img: loadedIMG,
+            location: location,
+            tags: [],
+            startDateTime: [list[i].startDateTime],
+            description: [list[i].eventDescription]
+          }
+        )
+      });
     }
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 
-    let noneFound = null;
-    if (this.state.events.length === 0) {
-      noneFound = <p style={{ fontSize: '20px', margin: '30px 30px'}}>No events found</p>
-    }
+componentWillMount() {
+  this.loadEvents();
+}
 
-    return (
-        <div className="gridContainer">
-          {noneFound}
-          {eventComponents}
-          <MoreButton onClick={this.loadEvents.bind(this)} height='220px'/>
-        </div>
-    );
+render() {
+  let eventComponents = [];
+  for (var i = 0; i < this.state.events.length; i++) {
+    var currEvent = this.state.events[i];
+
+    var date = getDateDayAndMonth(currEvent.startDateTime);
+    var dateDay = date[0];
+    var dateMonth = date[1];
+
+    eventComponents.push( <Event img={currEvent.img} name={currEvent.name} location={currEvent.location} tags={currEvent.tags}  dateDay={dateDay} dateMonth={dateMonth} description={currEvent.description}/> );
   }
+
+  eventComponents.push( <MoreButton onClick={this.loadEvents.bind(this)} height='220px'/> );
+
+  let noneFound = null;
+  if (this.state.events.length === 0) {
+    noneFound = <p style={{ fontSize: '20px', margin: '30px 30px'}}>No events found</p>
+  }
+
+  return (
+    <div className="gridContainer">
+    {noneFound}
+    {eventComponents}
+    </div>
+  );
+}
 }
 
 export default EventList;
